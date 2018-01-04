@@ -31,7 +31,7 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss)$/,
         use: ExtractTextPlugin.extract({
             fallback: "style-loader",
             use: ["css-loader", "sass-loader"]
@@ -41,10 +41,16 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('styles.min.css'),
-    new CopyWebpackPlugin([{
-      from: __dirname + '/src/images/',
-      to: __dirname + '/public/images/'
-    }]),
+    new CopyWebpackPlugin([
+      {
+        from: __dirname + '/src/images/',
+        to: __dirname + '/public/images/'
+      },
+      {
+        from: __dirname + '/src/fonts/',
+        to: __dirname + '/public/fonts/'
+      }
+    ]),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
       pngquant: {
