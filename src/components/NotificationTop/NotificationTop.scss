@@ -1,0 +1,27 @@
+.NotificationTop {
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #d30;
+        color: #ffffff;
+        border-radius: 100%;
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1;
+        position: absolute;
+        top: 12px;
+        right: 0;
+    }
+    & [class^="icon-"] {
+        font-size: 45px;
+        color: #706f6f;
+    }
+}

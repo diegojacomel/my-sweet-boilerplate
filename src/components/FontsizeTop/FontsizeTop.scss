@@ -1,0 +1,30 @@
+.FontsizeTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+    padding: 0 15px;
+    &-letter {
+        flex-basis: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(n+3) {
+            margin-top: 10px;
+        }
+        &-box {
+            display: flex;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            background: #f7931d;
+            font-weight: bold;
+            color: #ffffff;
+            & sup {
+                top: 4px;
+                font-size: 10px;
+            }
+        }
+    }
+}

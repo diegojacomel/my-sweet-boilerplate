@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-// import '../Icon/Icon.scss'
+import '../Icon/Icon.scss'
 
 class Icon extends Component {
     state = {}

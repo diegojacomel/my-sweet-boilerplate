@@ -11,22 +11,25 @@ class ProfileTop extends Component {
     render() {
         return (
             <div className="ProfileTop">
-                <figure className="ProfileTop-image">
-                    <img src="images/logo.png" alt=""/>
-                </figure>
-                <div className="ProfileTop-info">
-                    <div className="ProfileTop-info-company">
-                        Company
-                    </div>
-                    <div className="ProfileTop-info-user">
-                        User
-                    </div>
-                    <div className="ProfileTop-info-clock">
-                        Clock
+                <div className="ProfileTop-wrap">
+                    <figure className="ProfileTop-wrap-image">
+                        <img src="images/profile.jpg" alt="Profile"/>
+                    </figure>
+                    <div className="ProfileTop-wrap-info">
+                        <div className="ProfileTop-wrap-info-company">
+                            Amil
+                        </div>
+                        <div className="ProfileTop-wrap-info-user">
+                            Usuário: <span>dicrocs</span>
+                        </div>
+                        <div className="ProfileTop-wrap-info-clock">
+                            <Icon tag="clock" />
+                            20:45
+                        </div>
                     </div>
                 </div>
                 <div className="ProfileTop-arrow">
-                    <Icon tag="display" />
+                    <Icon tag="arrow-down" />
                 </div>
             </div>
         )
