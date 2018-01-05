@@ -1,6 +1,6 @@
 # React Boilerplate
 
-This file explains dependencies and scripts under [package.json](package.json)
+This file explains all dependencies and scripts under [package.json](package.json), project bootstraping and a basic redux flux tutorial.
 
 ## Content
 
