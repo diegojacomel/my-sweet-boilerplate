@@ -25,7 +25,7 @@ class Sidebar extends Component {
     render() {          
         return (
             <div>
-                <Menu className="sidebar-menu" />                              
+                <Menu className="sidebar-menu" />                           
             </div>         
         )
     }

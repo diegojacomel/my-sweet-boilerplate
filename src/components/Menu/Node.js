@@ -6,23 +6,24 @@ class Node extends Component {
     render() {
 
         let childnodes = null;
-
+        
         // recursion when has children
         if (this.props.children) {
             childnodes = this.props.children.map(function (childnode) {
-                return (                    
-                    <Node node={childnode} children={childnode.itens} />                    
+                return (
+                    <Node node={childnode} children={childnode.itens} key={childnode.id} />                    
                 );
             });
         }
-
+        console.log(childnodes);
         // return the list element and display children when exists
         return (
-            <li key={this.props.node.id}>
+            <li >
                 <a href="#">{this.props.node.nome}</a>
-                {childnodes ?
+                
+                {childnodes.length ?
                     <Collapse>
-                        <ul key="{this.props.node.id}">{childnodes}</ul>
+                        <ul>{childnodes}</ul>
                     </Collapse>
                     : null}
             </li>           
