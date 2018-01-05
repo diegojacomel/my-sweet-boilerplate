@@ -13,7 +13,7 @@ class Header extends Component {
     render () {
         return (
             <header className="Header">
-                <Container>
+                <Container fluid>
                     <div className="Header-wrap">
                         <Logo to="/" src="images/logo.png" alt="Logo Amil" />
                         <div className="Header-wrap-info">

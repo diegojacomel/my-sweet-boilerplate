@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import { Container, Table, Jumbotron, Button } from 'reactstrap'
+import { Table, Jumbotron, Button } from 'reactstrap'
 
 import './ListUsers.scss'
 
@@ -90,27 +90,25 @@ class ListUsers extends Component {
     render() {
         return (
             <div>
-                <Container>
-                    <Table striped bordered>
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Deletar</th>
-                                <th>Atualizar</th>
-                                {/* <th>Telefone</th>
-                                <th>Nome</th>
-                                <th>Nome da empresa</th> */}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.renderUsers()}
-                        </tbody>
-                    </Table>
-                    <Button onClick={this.addUser}>
-                        Add User
-                    </Button>
-                </Container>
+                <Table striped bordered>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Deletar</th>
+                            <th>Atualizar</th>
+                            {/* <th>Telefone</th>
+                            <th>Nome</th>
+                            <th>Nome da empresa</th> */}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.renderUsers()}
+                    </tbody>
+                </Table>
+                <Button onClick={this.addUser}>
+                    Add User
+                </Button>
             </div>
         );
     }

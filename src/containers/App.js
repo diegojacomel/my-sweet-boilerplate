@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Container>
+        <Container fluid>
            <div className="App-content">
               <Sidebar />
               <Content />
