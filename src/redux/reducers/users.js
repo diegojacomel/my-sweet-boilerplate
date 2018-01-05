@@ -52,7 +52,32 @@ const INITIAL_STATE = {
             items: state.users.items.concat(action.user)
           }
         }
-  
+      
+      case 'DELETE_USER_SUCCESS':
+      return {
+        ...state,
+        users: {
+          ...state.users,
+          items: state.users.items.filter(item => item.id !== action.user)
+        }
+      }
+      
+      case 'UPDATE_USER_SUCCESS':
+      return {
+        ...state,
+        users: {          
+          ...state.users,                    
+          items: state.users.items.map((val) => {             
+            if(val.id === action.id) {              
+              return {
+                ...action.user
+              }
+            }
+            return val
+          })
+        }
+      }
+
       default:
         return state;
     }

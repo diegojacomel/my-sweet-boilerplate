@@ -22,6 +22,10 @@ class Sidebar extends Component {
         })
     }
 
+    componentDidMount(){
+        console.log('olar')
+    }
+
     render() {        
         const menu = [
             {
