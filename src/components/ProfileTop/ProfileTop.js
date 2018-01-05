@@ -20,7 +20,7 @@ class ProfileTop extends Component {
                             Amil
                         </div>
                         <div className="ProfileTop-wrap-info-user">
-                            Usuário: <span>dicrocs</span>
+                            Usuário: <span>dicrocs e chinelo</span>
                         </div>
                         <div className="ProfileTop-wrap-info-clock">
                             <Icon tag="clock" />

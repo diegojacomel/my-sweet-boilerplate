@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { Container, Table, Jumbotron } from 'reactstrap'
+import { Container, Table, Jumbotron, Button } from 'reactstrap'
 
 import './ListUsers.scss'
 
@@ -33,12 +33,26 @@ class ListUsers extends Component {
                 <tr key={index}>
                     <td>{val.name}</td>
                     <td>{val.email}</td>
-                    <td>{val.phone}</td>
+                    {/* <td>{val.phone}</td>
                     <td>{val.website}</td>
-                    <td>{val.company.name}</td>
+                    <td>{val.company.name}</td> */}
                 </tr>
             )
         });
+    }
+
+    addUser = (e) => {
+        e.preventDefault()
+        const { dispatch } = this.props
+        dispatch({
+            type: 'ADD_USER_REQUEST',
+            payload: {
+                user: {
+                    email: 'dicrocs@amil.com',
+                    name: 'Dicrocs'
+                }
+            }
+        })
     }
 
     render() {
@@ -50,15 +64,18 @@ class ListUsers extends Component {
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
-                                <th>Telefone</th>
+                                {/* <th>Telefone</th>
                                 <th>Nome</th>
-                                <th>Nome da empresa</th>
+                                <th>Nome da empresa</th> */}
                             </tr>
                         </thead>
                         <tbody>
                             {this.renderUsers()}
                         </tbody>
                     </Table>
+                    <Button onClick={this.addUser}>
+                        Add User
+                    </Button>
                 </Container>
             </div>
         );

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import MyRouter from '../router/router'
+import { Container } from 'reactstrap'
 
 import Header from '../components/Header/Header'
-import ListUsers from '../components/ListUsers/ListUsers'
+import Sidebar from '../components/Sidebar/Sidebar'
+import Content from '../components/Content/Content'
 
 import './App.scss'
 
@@ -13,7 +14,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <MyRouter />
+        <Container>
+          <div className="App-content">
+            <Sidebar />
+            <Content />
+          </div>
+        </Container>
       </div>
     );
   }

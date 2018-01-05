@@ -4,7 +4,7 @@ import Icon from '../Icon/Icon'
 
 import './NotificationTop.scss'
 
-export default class NotificationTop extends Component {
+class NotificationTop extends Component {
     state = {}
 
     render() {
@@ -16,3 +16,5 @@ export default class NotificationTop extends Component {
         )
     }
 }
+
+export default NotificationTop
