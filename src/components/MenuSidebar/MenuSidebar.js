@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Collapse } from 'reactstrap';
 
 import Icon from '../Icon/Icon'
-import './Menu.scss'
 import Node from './Node'
+import './MenuSidebar.scss'
 
-class Menu extends Component {
+class MenuSidebar extends Component {
     state = { 
-        collapse: false        
+        collapse: false
     }
 
     componentDidMount() {
@@ -20,7 +20,7 @@ class Menu extends Component {
 
         dispatch({
             type: 'FETCH_MENU_USER_REQUEST',
-            payload: { userId: 10} // hard code for test
+            payload: { userId: 10 } // hard code for test
         });
     }
 
@@ -37,23 +37,18 @@ class Menu extends Component {
         });
 
         return (
-            <ul className="sidebar-menu">
+            <ul className="MenuSidebar">
                 {nodes}
             </ul>            
         );
         
     }
-
-    toggle = () => {
-        this.setState({ collapse: !this.state.collapse })
-    }
-
     
     render() {
         return (
-            <div className="">
+            <div class="Sidebar">
                 {this.renderMenu()}
-            </div>         
+            </div>
            
         )
     }
@@ -65,4 +60,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Menu)
+export default connect(mapStateToProps)(MenuSidebar)

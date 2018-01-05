@@ -16,14 +16,8 @@ class App extends Component {
         <Header />
         <Container>
            <div className="App-content">
-              <div className="row">
-                  <div className="col-4">
-                      <Sidebar />
-                  </div>
-                  <div className="col-8">
-                      <Content />
-                  </div>
-              </div>
+              <Sidebar />
+              <Content />
           </div>
         </Container>
       </div>

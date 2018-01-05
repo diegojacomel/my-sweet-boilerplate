@@ -1,8 +1,6 @@
-.sidebar-menu {
-    flex-basis: 300px;
+.MenuSidebar {
     padding-left: 0;
     margin-bottom: 0;
-
     & > li {
         & > a {
             display: flex;
@@ -22,8 +20,7 @@
                 margin-right: 13px;
             }
         }
-
-        & > ul {
+        & ul {
             padding: 0;
 
             & > li {

@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import { Collapse } from 'reactstrap';
 
 class Node extends Component {
+    state = {
+        collapse: false
+    }
+
+    toggle = () => {
+        this.setState({ collapse: !this.state.collapse })
+    }
 
     render() {
 
@@ -19,10 +26,10 @@ class Node extends Component {
         // return the list element and display children when exists
         return (
             <li >
-                <a href="#">{this.props.node.nome}</a>
+                <a href="#" onClick={this.toggle}>{this.props.node.nome}</a>
                 
                 {childnodes.length ?
-                    <Collapse>
+                    <Collapse isOpen={this.state.collapse}>
                         <ul>{childnodes}</ul>
                     </Collapse>
                     : null}
