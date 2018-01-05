@@ -40,7 +40,16 @@ const INITIAL_STATE = {
           ...state,
           users: {
             ...state.users,
-            isLoading: false,
+            isLoading: false
+          }
+        }
+
+      case 'ADD_USER_SUCCESS':
+        return {
+          ...state,
+          users: {
+            ...state.users,
+            items: state.users.items.concat(action.user)
           }
         }
   

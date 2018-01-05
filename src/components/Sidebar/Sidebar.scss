@@ -1,0 +1,37 @@
+.Sidebar {
+    flex-basis: 300px;
+    padding-left: 0;
+    margin-bottom: 0;
+    & > li {        
+        & > a {
+            display: flex;
+            align-items: center;
+            color: #706f6f;
+            padding: 10px 15px;
+            background-color: #ccc;
+            font-size: 12px;
+            font-weight: bold;
+            &:hover {
+                text-decoration: none;
+            }
+            & > [class^="icon-"] {
+                font-size: 28px;
+                margin-right: 13px;
+            }
+        }
+        & > ul {
+            padding: 0;
+            & > li {
+                background-color: #dddddd;
+                padding: 0 38px 0 24px;
+                & > a {                    
+                    font-size: 13px;                
+                    color: #4a4a4a;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
