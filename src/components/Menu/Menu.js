@@ -48,7 +48,7 @@ class Menu extends Component {
         this.setState({ collapse: !this.state.collapse })
     }
 
-
+    
     render() {
         return (
             <div className="">

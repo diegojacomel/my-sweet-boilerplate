@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import { Container, Table, Jumbotron, Button } from 'reactstrap'
 
@@ -21,6 +22,34 @@ class ListUsers extends Component {
         });
     }
 
+    updateUser= (id) => {
+        const { dispatch } = this.props
+        
+        dispatch({
+            type: 'UPDATE_USER_REQUEST',
+            payload: {
+                user: {
+                    id,
+                    email: 'dichinelo@amil.com',
+                    name: 'Dichinelo'
+                }
+            }        
+        })
+    }
+
+    deleteUser = (id) => {
+        const { dispatch } = this.props
+        
+        dispatch({
+            type: 'DELETE_USER_REQUEST',
+            payload: {
+                user: {
+                    "id": id
+                }
+            }
+        })
+    }
+
     renderUsers = () => {
         const { users } = this.props;
 
@@ -33,9 +62,12 @@ class ListUsers extends Component {
                 <tr key={index}>
                     <td>{val.name}</td>
                     <td>{val.email}</td>
+                    <td><Button onClick={() => this.deleteUser(val.id)} color="danger">Deletar</Button></td>
+                    <td><Button onClick={() => this.updateUser(val.id)} color="info">Update</Button></td>
                     {/* <td>{val.phone}</td>
                     <td>{val.website}</td>
                     <td>{val.company.name}</td> */}
+
                 </tr>
             )
         });
@@ -64,6 +96,7 @@ class ListUsers extends Component {
                             <tr>
                                 <th>Nome</th>
                                 <th>E-mail</th>
+                                <th>Deletar</th>
                                 {/* <th>Telefone</th>
                                 <th>Nome</th>
                                 <th>Nome da empresa</th> */}
