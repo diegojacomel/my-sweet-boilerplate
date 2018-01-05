@@ -15,9 +15,15 @@ class App extends Component {
       <div className="App">
         <Header />
         <Container>
-          <div className="App-content">
-            <Sidebar />
-            <Content />
+           <div className="App-content">
+              <div className="row">
+                  <div className="col-4">
+                      <Sidebar />
+                  </div>
+                  <div className="col-8">
+                      <Content />
+                  </div>
+              </div>
           </div>
         </Container>
       </div>

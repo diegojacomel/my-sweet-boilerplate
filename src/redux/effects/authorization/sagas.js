@@ -3,15 +3,15 @@ import AuthorizationService from '../../../services/authorization';
 
 function* fetchMenu(action) {
     try {
-        const menu = yield call(AuthorizationService.getMenu);
+        const menu = yield call(AuthorizationService.getMenu);    
         
-        yield put({ type: "FETCH_MENU_SUCCESS", menu: menu.data });
-    } catch (e) {
-        yield put({ type: "FETCH_MENU_FAILURE", message: e.message });
+        yield put({ type: "FETCH_MENU_USER_SUCCESS", menu: menu.data });
+    } catch (e) {        
+        //yield put({ type: "FETCH_MENU_FAILURE", message: e.message });
     }
 }
 
 // here we can pass an array of sagas to export to the rootSagas
-export const userSagas = [
-    takeEvery("FETCH_MENU_USER", fetchMenu)
+export const authorizationSagas = [
+    takeEvery("FETCH_MENU_USER_REQUEST", fetchMenu)
 ];

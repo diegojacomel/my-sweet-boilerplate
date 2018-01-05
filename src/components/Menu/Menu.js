@@ -1,12 +1,47 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Collapse } from 'reactstrap';
 
 import Icon from '../Icon/Icon'
-
-import Submenu from '../Submenu/Submenu'
+import './Menu.scss'
+import Node from './Node'
 
 class Menu extends Component {
     state = { 
-        collapse: false     
+        collapse: false        
+    }
+
+    componentDidMount() {
+        this.fetchMenu()
+    }
+
+    fetchMenu = () => {
+        const { dispatch } = this.props
+
+        dispatch({
+            type: 'FETCH_MENU_USER_REQUEST',
+            payload: { userId: 10} // hard code for test
+        });
+    }
+
+
+    renderMenu = () => {
+        const { authorization } = this.props;       
+        
+        var menu = authorization.menu.menu;
+        let nodes = menu.map(function (item) {
+           
+            return (                
+                <Node node={item} children={item.itens} key={item.id} />              
+            );
+        });
+
+        return (
+            <ul className="sidebar-menu">
+                {nodes}
+            </ul>            
+        );
+        
     }
 
     toggle = () => {
@@ -16,15 +51,18 @@ class Menu extends Component {
 
     render() {
         return (
-             <li>                    
-                <a href="#" onClick={this.toggle} >                                
-                    <Icon tag={this.props.icon} />
-                    {this.props.name}
-                </a>
-                <Submenu submenus={this.props.submenu} collapse={this.state.collapse} />         
-            </li>            
+            <div className="">
+                {this.renderMenu()}
+            </div>         
+           
         )
     }
 }
 
-export default Menu
+function mapStateToProps(state) {
+    return {
+        authorization: state.authorization
+    }
+}
+
+export default connect(mapStateToProps)(Menu)
