@@ -1,0 +1,31 @@
+.ProfileTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    &-wrap {
+        display: flex;
+        align-items: center;
+        &-image {
+            margin-right: 15px;
+            & img {
+                display: block;
+                border-radius: 100%;
+            }
+        }
+        &-info {
+            text-align: left;
+            font-size: 12px;
+            font-weight: bold;
+            color: #706f6f;
+            &-company {
+                text-transform: uppercase;
+            }
+            &-user {
+                & span {
+                    color: #f7931d;
+                }
+            }
+        }
+    }
+}
