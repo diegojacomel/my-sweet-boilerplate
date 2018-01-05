@@ -8,7 +8,7 @@ This file explains dependencies and scripts under [package.json](package.json)
 1. [Scripts](#scripts)
 2. [DevDependencies](#dev-dependencies)
 3. [Dependencies](#dependencies)
-
+4. [Redux Flux](#redux)
 
 
 ### General Info
@@ -38,7 +38,7 @@ This file explains dependencies and scripts under [package.json](package.json)
 },
 ```
 
-#### Development
+ #### Development
 
   *"dev": "webpack-dev-server --progress --colors --inline --hot"*
   
@@ -195,5 +195,15 @@ It allows you to natively compile .scss files to css at incredible speed and aut
     
     LogRocket is a production Redux logging tool that lets you replay problems as if they happened in your own browser. Instead of guessing why errors happen, or asking users for screenshots and log dumps, LogRocket lets you replay Redux actions + state, network requests, console logs, and see a video of what the user saw.
 
+## Redux
+
+  Redux is a predictable state container for JavaScript apps (Not to be confused with a WordPress framework – Redux Framework.) It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger. See more under redux [documentation](https://redux.js.org/). [This tutorial](https://egghead.io/courses/getting-started-with-redux) can help you achieve some redux basic understanding, it's from redux's co-creator Dan Abramov, and it's free.
+  
+### Redux flux in this boilerplate
+
+    1. 
+  
+  
+  
 
 
