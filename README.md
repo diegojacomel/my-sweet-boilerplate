@@ -1,18 +1,33 @@
 # React Boilerplate
 
-This file explains dependencies and scripts under [package.json](package.json)
+This file explains all dependencies and scripts under [package.json](package.json), project bootstraping and a basic redux flux tutorial.
 
 ## Content
 
+0. [Project Bootstrap](#project-bootstrap)
 1. [Scripts](#scripts)
 2. [DevDependencies](#dev-dependencies)
 3. [Dependencies](#dependencies)
+4. [Redux Flux](#redux)
+
 
 ### General Info
 
  * [Webpack](https://webpack.js.org/concepts/)
   
     *Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of           transforming, bundling, or packaging just about any resource or asset.*
+
+## Project Bootstrap
+  
+  0. If you aren't in the project folder open it on the terminal, using **cd ..path**
+  
+  1. Run npm install --verbose, to install all dependencies from package.json
+  
+  2. Run **npm run dev**, to run the [development](#development) environment
+  
+  3. If you want to build the production environment, run the [build](#production) script: **npm run build**
+  
+  4. **IMPORTANT!**, IF YOU DID BUILD, REMBEMBER TO DELETE ALL FILES EXCEPT **INDEX.HTML** UNDER THE PUBLIC FOLDER, OTHERWISE CHANGES WON'T BE MADE WHEN YOU RUN THE DEVELOPMENT SCRIPT
 
 ## Scripts
 
@@ -23,8 +38,10 @@ This file explains dependencies and scripts under [package.json](package.json)
 },
 ```
 
-#### 1.1 "dev": "webpack-dev-server --progress --colors --inline --hot",
+ #### Development
 
+  *"dev": "webpack-dev-server --progress --colors --inline --hot"*
+  
   Builds the development server [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
    
   **Options:**
@@ -39,7 +56,9 @@ This file explains dependencies and scripts under [package.json](package.json)
         More information at [HMR](https://webpack.js.org/concepts/hot-module-replacement/)*
         
 
-#### 1.2  "build": "webpack --progress -p"
+#### Production
+
+  *"build": "webpack --progress -p"*
   
   Builds webpack modules, that are mapped under *[webpack.config.js](webpack.config.js)*
   
@@ -94,8 +113,6 @@ This file explains dependencies and scripts under [package.json](package.json)
        * [Object Rest Spread](https://babeljs.io/docs/plugins/transform-object-rest-spread/)
        * [Runtime](https://www.npmjs.com/package/babel-plugin-transform-runtime)
          
-        
-      
        
 * [Copy Webpack Plugin](https://github.com/webpack-contrib/copy-webpack-plugin)
   
@@ -170,7 +187,131 @@ It allows you to natively compile .scss files to css at incredible speed and aut
   
     Stateless React Components for Bootstrap 4.
     
+  * [Redux Form](https://redux-form.com/7.2.0/docs/gettingstarted.md/)
+  
+    A library to manage redux's incoming form data. The docuemntation explains about Redux flux, and redux-form usage. Examples about it will be generated in the future.
+    
   * [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
     
     LogRocket is a production Redux logging tool that lets you replay problems as if they happened in your own browser. Instead of guessing why errors happen, or asking users for screenshots and log dumps, LogRocket lets you replay Redux actions + state, network requests, console logs, and see a video of what the user saw.
+
+## Redux
+
+  Redux is a predictable state container for JavaScript apps (Not to be confused with a WordPress framework – Redux Framework.) It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger. See more under redux [documentation](https://redux.js.org/). [This tutorial](https://egghead.io/courses/getting-started-with-redux) can help you achieve some redux basic understanding, it's from redux's co-creator Dan Abramov, and it's free.
+  
+### Redux flux: a basic tutorial (PT-BR)
+
+ 1. Identificar a necessidade de um método, em um [componente](src/components/ListUsers/ListUsers.js), ex: buscar algum dado, adicionar usuário
+ 
+ 2. Criar o [método](src/components/ListUsers/ListUsers.js) e dispara-lo através de um handle, ex: onClick, onChange (fazendo o dispatch)
+    ```react
+      addUser = (e) => {
+          e.preventDefault()
+          const { dispatch } = this.props //dispatch
+          dispatch({
+              type: 'ADD_USER_REQUEST',
+              payload: {
+                  user: {
+                      email: 'dicrocs@amil.com',
+                      name: 'Dicrocs'
+                  }
+              }
+          })
+      }
+
+      render(){
+        return {
+        .
+        .
+        .
+           <Button onClick={this.addUser}> // chamar o metodo addUser
+            Add User
+           </Button>
+        }
+      }  
+    ```     
+    
+  3. [Importar](src/components/ListUsers/ListUsers.js) o react-redux connect **import { connect } from 'react-redux'**
+
+  4. Mapear o estado do [componente](src/components/ListUsers/ListUsers.js)
+      ```react
+        function mapStateToProps(state) {
+          return {
+            users: state.users
+          }
+        }      
+       ```
+      
+  5. Fazer o connect no [componente](src/components/ListUsers/ListUsers.js)
+       ```react
+        export default connect(mapStateToProps)(ListUsers)
+       ```
+
+  6. Criar uma função no [service](src/services/users.js)
+      ```react
+        static getUsers() {
+          return Api.get('/users');
+        }
+       ```
+
+  7. Criação do [reducer](src/redux/reducers/users.js)
+     ```react
+      case 'FETCH_USERS_REQUEST':
+        return {
+          ...state,
+          users: {
+            ...state.users,
+            isLoading: true
+          }
+        }
+       ```
+
+  8. Criar um [effect](src/redux/effects/users/sagas.js) do saga
+      ```react
+          function* addUser(action) {
+              try {
+                  const { user } = action.payload;
+                  const myUser = yield call(UsersService.postUser, user);
+
+                  yield put({ type: "ADD_USER_SUCCESS", user: myUser.data })
+              } catch (e) {
+                  yield put({ type: "ADD_USER_FAILURE", message: e.message })
+              }
+            }
+
+            // here we can pass an array of sagas to export to the rootSagas
+            export const userSagas = [
+                takeEvery("ADD_USER_REQUEST", addUser),
+                .
+                .
+                .
+                any new function goes here
+            ];
+
+      ```
+  
+  9. Fazer o loop do objeto retornado através de um método no [componente](src/components/ListUsers/ListUsers.js) (os dados serão retornados nas props do componente)
+      ```react
+      renderUsers = () => {
+            const { users } = this.props; // mesma coisa que const user = this.props.user, pega os dados do redux nas props com o método                                           // mapStateToProps
+            if (users.users.isLoading) {
+                return <tr><td>Loading...</td></tr>
+            }
+
+            return users.users.items.map((val, index) => {
+                return (
+                    <tr key={index}>
+                        <td>{val.name}</td>
+                        <td>{val.email}</td>
+                        {/* <td>{val.phone}</td>
+                        <td>{val.website}</td>
+                        <td>{val.company.name}</td> */}
+                    </tr>
+                )
+            });
+        }
+      ```
+ 10. Pronto
+  
+
 
