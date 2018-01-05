@@ -44,7 +44,7 @@ class ListUsers extends Component {
             type: 'DELETE_USER_REQUEST',
             payload: {
                 user: {
-                    "id": id
+                    id
                 }
             }
         })
@@ -97,6 +97,7 @@ class ListUsers extends Component {
                                 <th>Nome</th>
                                 <th>E-mail</th>
                                 <th>Deletar</th>
+                                <th>Atualizar</th>
                                 {/* <th>Telefone</th>
                                 <th>Nome</th>
                                 <th>Nome da empresa</th> */}

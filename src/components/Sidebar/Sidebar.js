@@ -21,11 +21,7 @@ class Sidebar extends Component {
             collapse: !this.state.collapse,
         })
     }
-
-    componentDidMount(){
-        console.log('olar')
-    }
-
+    
     render() {        
         const menu = [
             {

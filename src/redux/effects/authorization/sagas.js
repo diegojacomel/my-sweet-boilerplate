@@ -12,6 +12,6 @@ function* fetchMenu(action) {
 }
 
 // here we can pass an array of sagas to export to the rootSagas
-export const userSagas = [
+export const authorizationSagas = [
     takeEvery("FETCH_MENU_USER", fetchMenu)
 ];

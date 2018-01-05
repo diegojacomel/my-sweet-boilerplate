@@ -4,7 +4,6 @@ import UsersService from '../../../services/users';
 function* deleteUser(action) {
     try {
         const { user } = action.payload;
-        //const myUser = yield call(UsersService.deleteUser, user.id);
         
        yield put({ type: "DELETE_USER_SUCCESS", user: user.id })
 
@@ -17,7 +16,6 @@ function* updateUser(action) {
     try {
         const { user } = action.payload;
         const myUser = yield call(UsersService.updateUser, user.id, user);
-           
 
         yield put({ type: "UPDATE_USER_SUCCESS", user: myUser.data, id: myUser.data.id })
 

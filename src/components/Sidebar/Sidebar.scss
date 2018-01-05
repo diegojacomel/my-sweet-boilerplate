@@ -1,14 +1,14 @@
 .Sidebar {
-    flex-basis: 300px;
-    padding-left: 0;
+    flex-basis: 280px;
+    padding: 15px 0;
     margin-bottom: 0;
+    background-color: #ccc;
     & > li {        
         & > a {
             display: flex;
             align-items: center;
             color: #706f6f;
-            padding: 10px 15px;
-            background-color: #ccc;
+            padding: 10px 20px;
             font-size: 12px;
             font-weight: bold;
             &:hover {
@@ -19,10 +19,10 @@
                 margin-right: 13px;
             }
         }
-        & > ul {
-            padding: 0;
+        & ul {
+            padding: 5px 0;
+            background-color: #dddddd;
             & > li {
-                background-color: #dddddd;
                 padding: 0 38px 0 24px;
                 & > a {                    
                     font-size: 13px;                
