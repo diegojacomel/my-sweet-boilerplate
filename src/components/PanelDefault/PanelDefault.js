@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
 
+import Icon from '../Icon/Icon'
+
+import { Collapse } from 'reactstrap'
+
 import './PanelDefault.scss'
 
 class PanelDefault extends Component {
-    state = {}
+    state = { collapsed:  true }
+
+    handleCollapse() {
+        this.setState({ collapsed: !this.state.collapsed })
+    }
 
     render() {
         return (
             <div className="PanelDefault">
                 <div className="PanelDefault-title">
                     {this.props.title}
-                </div>
+                    <button onClick={() => this.handleCollapse()}><Icon  tag="arrow-down"/></button>
+                </div>                
                 <div className="PanelDefault-body">
-                    {this.props.children}
+                    <Collapse isOpen={this.state.collapsed} >
+                        {this.props.children}
+                    </Collapse>
                 </div>
             </div>
         );
