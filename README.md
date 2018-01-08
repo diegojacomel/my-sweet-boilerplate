@@ -2,6 +2,8 @@
 
 This file explains all dependencies and scripts under [package.json](package.json), project bootstraping and a basic redux flux tutorial.
 
+Project Wiki: https://github.com/diegojacomel/my-sweet-boilerplate/wiki
+
 ## Content
 
 0. [Project Bootstrap](#project-bootstrap)
