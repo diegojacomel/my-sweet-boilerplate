@@ -15,7 +15,7 @@ module.exports = {
     port: 8080
   },
   resolve: {
-    extensions: [' ', '.js', '.jsx', 'scss']
+    extensions: [' ', '.js', '.jsx']
   },
   module: {
     rules: [

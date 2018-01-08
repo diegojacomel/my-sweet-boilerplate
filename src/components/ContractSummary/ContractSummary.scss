@@ -1,0 +1,7 @@
+.ContractSummary {
+    &-item {
+        & + .ContractSummary-item {
+            margin-top: 30px;
+        }
+    }
+}

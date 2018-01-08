@@ -1,0 +1,16 @@
+.PanelDefault {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    color: #706f6f;
+    margin-bottom: 50px;
+    &-title {
+        border-bottom: 1px solid #f7931d;
+        font-size: 30px;
+        line-height: 1;
+        padding-bottom: 15px;
+    }
+    &-body {
+        padding-top: 15px;
+    }
+}

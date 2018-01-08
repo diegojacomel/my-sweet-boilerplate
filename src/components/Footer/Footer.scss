@@ -1,0 +1,78 @@
+.Footer {
+    border-top: 5px solid #febc11;
+    .Footer-top {
+        background: #eeedeb;
+        .Footer-top-links-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #c6c6c6;
+            padding: 30px 0;
+            ul {
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                font-size: 13px;
+            }
+            .Footer-top-links-wrap-left {
+                li {
+                    &:first-child {
+                        &:before {
+                            content: '';
+                            margin: 0;
+                        }
+                    }
+                    &:before {
+                        content: '|';
+                        margin: 0 15px;
+                    }
+                }
+            }
+            .Footer-top-links-wrap-right {
+                li {
+                    &:first-child {
+                        &:before {
+                            content: '';
+                            margin: 0;
+                        }
+                    }
+                    &:before {
+                        content: '|';
+                        margin: 0 20px;
+                    }
+                }
+            }
+        }
+        .Footer-top-group-wrap {
+            padding: 30px 0;
+            ul {
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+            }
+            .Footer-top-group-wrap-title {
+                color: #706f6f;
+            }
+        }
+    }
+    .Footer-bottom {
+        background: #c9c9c9;
+        .Footer-bottom-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            .Footer-bottom-middle {
+                text-align: center;
+                font-size: 13px;
+                color: #706f6f;
+            }
+        }
+    }
+}

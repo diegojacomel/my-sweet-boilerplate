@@ -1,0 +1,23 @@
+.FormControl {
+    &.block {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        label {
+            display: block;
+            flex-basis: 100%;
+        }
+        input {
+            display: block;
+            flex-basis: 75%;
+            border: 1px solid #cccccc;
+            padding: 5px 10px;
+        }
+        button {
+            display: block;
+            flex-basis: 25%;
+            border: none;
+        }
+    }
+}
