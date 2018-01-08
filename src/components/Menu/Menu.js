@@ -4,9 +4,9 @@ import { Collapse } from 'reactstrap';
 
 import Icon from '../Icon/Icon'
 import Node from './Node'
-import './MenuSidebar.scss'
+import './Menu.scss'
 
-class MenuSidebar extends Component {
+class Menu extends Component {
     state = { 
         collapse: false
     }
@@ -37,7 +37,7 @@ class MenuSidebar extends Component {
         });
 
         return (
-            <ul className="MenuSidebar">
+            <ul className="Menu">
                 {nodes}
             </ul>            
         );
@@ -46,7 +46,7 @@ class MenuSidebar extends Component {
     
     render() {
         return (
-            <div class="Sidebar">
+            <div className="Sidebar">
                 {this.renderMenu()}
             </div>
            
@@ -60,4 +60,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(MenuSidebar)
+export default connect(mapStateToProps)(Menu)

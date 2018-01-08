@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import ListBody from '../components/ListBody/ListBody'
-import ListUsers from '../components/ListUsers/ListUsers'
-import NotFound from '../components/NotFound/NotFound'
+import ListBody from '../containers/Users/ListBody/ListBody'
+import ListUsers from '../containers/Users/ListUsers/ListUsers'
+import NotFound from '../containers/Errors/NotFound/NotFound'
 
 class MyRouter extends Component {
     render () {

@@ -12,7 +12,7 @@ import rootSagas from './redux/effects';
 // Router
 import { BrowserRouter } from 'react-router-dom';
 
-import App from './containers/App';
+import App from './containers/App/App';
 
 import './index.scss'
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Collapse } from 'reactstrap';
 
 import Icon from '../Icon/Icon'
-import MenuSidebar from '../MenuSidebar/MenuSidebar'
+import Menu from '../Menu/Menu'
 
 import './Sidebar.scss'
 
@@ -24,7 +24,7 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <MenuSidebar className="MenuSidebar" />                                   
+            <Menu className="Menu" /> 
         )
     }
 }

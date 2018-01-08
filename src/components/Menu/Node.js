@@ -22,7 +22,7 @@ class Node extends Component {
                 );
             });
         }
-        console.log(childnodes);
+
         // return the list element and display children when exists
         return (
             <li >

@@ -17,7 +17,6 @@ const INITIAL_STATE = {
 const auth = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'FETCH_MENU_USER_SUCCESS':
-            console.log("ENTROU REDUCER")
             return {
                 ...state,
                 menu: {
