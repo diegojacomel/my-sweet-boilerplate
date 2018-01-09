@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Form, reduxForm, Field } from 'redux-form'
 import { Row, Col, Button, ButtonGroup, Label } from 'reactstrap'
+
 import FormControl from '../FormControl/FormControl'
+import Icon from '../Icon/Icon'
 
 import './ContractCancel.scss'
 
@@ -10,7 +12,7 @@ class ContractCancel extends Component {
         return (
             <div className="ContractCancel">
                 <Form onSubmit={() => {return}}>
-                    <ButtonGroup >
+                    <ButtonGroup>
                         <Button>
                             Cancelar apenas contrato informado
                         </Button>
@@ -21,63 +23,70 @@ class ContractCancel extends Component {
                             Cancelar contrato informado e todos os contratos do grupo
                         </Button>
                     </ButtonGroup>
-                    <Row>
-                        <Col lg="5">
-                            <FormControl display="block">
-                                <Label>
-                                    Novo Contrato Mãe Matriz
-                                </Label>
-                                <Field
-                                    name="ContratoMae"
-                                    placeholder="Digite o número do contrato"
-                                    component="input"
-                                    type="text"
-                                    className="Field" />
-                            </FormControl>
-                        </Col>
-                        <Col lg="5">
-                            <FormControl display="block">
-                                <Label>
-                                    Novo Contrato Mãe Matriz
-                                </Label>
-                                <Field
-                                    name="ContratoMae"
-                                    placeholder="Digite o número do contrato"
-                                    component="input"
-                                    type="text"
-                                    className="Field" />
-                            </FormControl>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg="5">
-                            <FormControl display="block">
-                                <Label>
-                                    Novo Contrato Mãe Matriz
-                                </Label>
-                                <Field
-                                    name="ContratoMae"
-                                    placeholder="Digite o número do contrato"
-                                    component="input"
-                                    type="text"
-                                    className="Field" />
-                            </FormControl>
-                        </Col>
-                        <Col lg="5">
-                            <FormControl display="block">
-                                <Label>
-                                    Novo Contrato Mãe Matriz
-                                </Label>
-                                <Field
-                                    name="ContratoMae"
-                                    placeholder="Digite o número do contrato"
-                                    component="input"
-                                    type="text"
-                                    className="Field" />
-                            </FormControl>
-                        </Col>
-                    </Row>
-                    <Button color="warning">Cancelar contrato</Button>
+                    <div className="ContractCancel-item">
+                        <Row>
+                            <Col lg="5">
+                                <FormControl display="block">
+                                    <Label>
+                                        Novo Contrato Mãe Matriz
+                                    </Label>
+                                    <Field
+                                        name="ContratoMae"
+                                        placeholder="Digite o número do contrato"
+                                        component="input"
+                                        type="text"
+                                        className="Field" />
+                                </FormControl>
+                            </Col>
+                            <Col lg="5">
+                                <FormControl display="block">
+                                    <Label>
+                                        Novo Contrato Mãe Matriz
+                                    </Label>
+                                    <Field
+                                        name="ContratoMae"
+                                        placeholder="Digite o número do contrato"
+                                        component="input"
+                                        type="text"
+                                        className="Field" />
+                                </FormControl>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div className="ContractCancel-item">
+                        <Row>
+                            <Col lg="5">
+                                <FormControl display="block">
+                                    <Label>
+                                        Novo Contrato Mãe Matriz
+                                    </Label>
+                                    <Field
+                                        name="ContratoMae"
+                                        placeholder="Digite o número do contrato"
+                                        component="input"
+                                        type="text"
+                                        className="Field" />
+                                </FormControl>
+                            </Col>
+                            <Col lg="5">
+                                <FormControl display="block">
+                                    <Label>
+                                        Novo Contrato Mãe Matriz
+                                    </Label>
+                                    <Field
+                                        name="ContratoMae"
+                                        placeholder="Digite o número do contrato"
+                                        component="input"
+                                        type="text"
+                                        className="Field" />
+                                </FormControl>
+                            </Col>
+                        </Row>
+                    </div>
+                    <Button color="warning" size="lg">
+                        <Icon tag="hammer" />
+                        Cancelar contrato
+                    </Button>
                 </Form>
             </div>
         );

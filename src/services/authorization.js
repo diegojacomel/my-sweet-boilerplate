@@ -8,7 +8,7 @@ class AuthorizationService {
             "data": [
                 {
                     "id": "1",
-                    "nome": "Menu 1",
+                    "nome": "SISAMIL 1.0",
                     "icon": "key",
                     "recurso": "string",
                     "itens": [
@@ -47,7 +47,7 @@ class AuthorizationService {
                 },
                 {
                     "id": "7",
-                    "nome": "Menu 2",
+                    "nome": "Autorizações",
                     "icon": "doc",
                     "recurso": "string",
                     "itens": [
@@ -67,63 +67,63 @@ class AuthorizationService {
                 },
                 {
                     "id": "10",
-                    "nome": "Menu 3",
+                    "nome": "Consulta de elegibilidade",
                     "icon": "search",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "11",
-                    "nome": "Menu 4",
+                    "nome": "TISS",
                     "icon": "update",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "12",
-                    "nome": "Menu 5",
+                    "nome": "Consultas e relatórios",
                     "icon": "report",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "13",
-                    "nome": "Menu 6",
+                    "nome": "Contas médicas",
                     "icon": "money",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "14",
-                    "nome": "Menu 7",
+                    "nome": "Recurso de glosa",
                     "icon": "hammer",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "15",
-                    "nome": "Menu 8",
+                    "nome": "Digitação de contas",
                     "icon": "display",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "16",
-                    "nome": "Menu 9",
+                    "nome": "Informe de rendimentos",
                     "icon": "folder",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "17",
-                    "nome": "Menu 10",
+                    "nome": "Agendamento online",
                     "icon": "calendar",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "18",
-                    "nome": "Menu 11",
+                    "nome": "OPME",
                     "icon": "opme",
                     "recurso": "string",
                     "itens": []

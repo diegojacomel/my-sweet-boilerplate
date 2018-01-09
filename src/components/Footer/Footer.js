@@ -9,7 +9,7 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <footer className="Footer">
+            <Footer className="Footer">
                 <div className="Footer-top">
                     <div className="Footer-top-links">
                         <Container fluid>
@@ -36,7 +36,7 @@ export default class Footer extends Component {
                     <div className="Footer-top-group">
                         <Container fluid>
                             <div className="Footer-top-group-wrap">
-                                <h4 className="footer-top-group-wrap-title">
+                                <h4 className="Footer-top-group-wrap-title">
                                     Sites Grupo Amil
                                 </h4>
                                 <ul>
@@ -60,24 +60,24 @@ export default class Footer extends Component {
                 <div className="Footer-bottom">
                     <Container fluid>
                         <div className="Footer-bottom-wrap">
-                            <div className="footer-bottom-start">
+                            <div className="Footer-bottom-start">
                                 <img src="images/logo-ans.svg" alt="ANS" />
                             </div>
-                            <div className="footer-bottom-middle">
-                                <div className="footer-bottom-middle-doc">
+                            <div className="Footer-bottom-middle">
+                                <div className="Footer-bottom-middle-doc">
                                     CNPJ 29.309.127/0001-79
                                 </div>
-                                <div className="footer-bottom-middle-copy">
+                                <div className="Footer-bottom-middle-copy">
                                     Copyright © 2007-2015, Amil Assistência Médica Internacional S/A. Todos os direitos reservados.
                                 </div>
                             </div>
-                            <div className="footer-bottom-end">
+                            <div className="Footer-bottom-end">
                                 <img src="images/numero-ans.jpg" alt="Number ANS" />
                             </div>
                         </div>
                     </Container>
                 </div>
-            </footer>        
+            </Footer>        
         );
     }
 }
