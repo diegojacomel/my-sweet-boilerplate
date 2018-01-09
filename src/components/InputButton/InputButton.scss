@@ -1,0 +1,14 @@
+.InputButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    & > input {
+        border-right: none !important;
+        border-radius: 5px 0 0 5px;
+    }
+    & > button {
+        border-left: none;
+        border-radius:  0 5px 5px 0;
+    }
+}

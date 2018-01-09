@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Collapse } from 'reactstrap';
+import Icon from '../Icon/Icon'
 
 class Node extends Component {
     state = {
@@ -26,7 +27,10 @@ class Node extends Component {
         // return the list element and display children when exists
         return (
             <li >
-                <a href="#" onClick={this.toggle}>{this.props.node.nome}</a>
+                <a href="#" onClick={this.toggle}>
+                    <Icon tag={this.props.node.icon} />
+                    {this.props.node.nome}
+                </a>
                 
                 {childnodes.length ?
                     <Collapse isOpen={this.state.collapse}>

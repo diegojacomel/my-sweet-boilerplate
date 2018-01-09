@@ -18,13 +18,15 @@ class PanelDefault extends Component {
             <div className="PanelDefault">
                 <div className="PanelDefault-title">
                     {this.props.title}
-                    <button onClick={() => this.handleCollapse()}><Icon  tag="arrow-down"/></button>
+                    <button className={(this.state.collapsed ? "PanelDefault-active" : "")} onClick={() => this.handleCollapse()}>
+                        <Icon tag="arrow-down"/>
+                    </button>
                 </div>                
-                <div className="PanelDefault-body">
-                    <Collapse isOpen={this.state.collapsed} >
+                <Collapse isOpen={this.state.collapsed} >
+                    <div className="PanelDefault-body">
                         {this.props.children}
-                    </Collapse>
-                </div>
+                    </div>
+                </Collapse>
             </div>
         );
     }

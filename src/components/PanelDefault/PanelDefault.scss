@@ -5,10 +5,11 @@
     color: #706f6f;
     margin-bottom: 50px;
     &-title {
-        border-bottom: 1px solid #f7931d;
         font-size: 30px;
         line-height: 1;
-        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         & > button {
             cursor: pointer;
             float: right;
@@ -20,10 +21,20 @@
             &:focus {
                 outline: 0;
             }
-            transform: rotate(180deg);
+        }
+        [class^="icon-"] {
+            display: block;
+            transition: all 0.5s;
         }
     }
     &-body {
+        margin-top: 15px;
         padding-top: 15px;
-    }    
+        border-top: 1px solid #f7931d;
+    }
+    &-active {
+        [class^="icon-"] {
+            transform: rotate(180deg);
+        }
+    }
 }

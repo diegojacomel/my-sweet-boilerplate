@@ -15,9 +15,15 @@
                 justify-content: space-between;
                 align-items: center;
                 margin: 0;
-                font-size: 13px;
+                font-size: 14px;
+                li {
+                    a {
+                        color: #706f6f;
+                    }
+                }
             }
             .Footer-top-links-wrap-left {
+                font-weight: bold;
                 li {
                     &:first-child {
                         &:before {

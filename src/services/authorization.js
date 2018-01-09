@@ -9,6 +9,7 @@ class AuthorizationService {
                 {
                     "id": "1",
                     "nome": "Menu 1",
+                    "icon": "key",
                     "recurso": "string",
                     "itens": [
                         {
@@ -47,6 +48,7 @@ class AuthorizationService {
                 {
                     "id": "7",
                     "nome": "Menu 2",
+                    "icon": "doc",
                     "recurso": "string",
                     "itens": [
                         {
@@ -66,12 +68,63 @@ class AuthorizationService {
                 {
                     "id": "10",
                     "nome": "Menu 3",
+                    "icon": "search",
                     "recurso": "string",
                     "itens": []
                 },
                 {
                     "id": "11",
                     "nome": "Menu 4",
+                    "icon": "update",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "12",
+                    "nome": "Menu 5",
+                    "icon": "report",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "13",
+                    "nome": "Menu 6",
+                    "icon": "money",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "14",
+                    "nome": "Menu 7",
+                    "icon": "hammer",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "15",
+                    "nome": "Menu 8",
+                    "icon": "display",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "16",
+                    "nome": "Menu 9",
+                    "icon": "folder",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "17",
+                    "nome": "Menu 10",
+                    "icon": "calendar",
+                    "recurso": "string",
+                    "itens": []
+                },
+                {
+                    "id": "18",
+                    "nome": "Menu 11",
+                    "icon": "opme",
                     "recurso": "string",
                     "itens": []
                 }
