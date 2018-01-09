@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Collapse } from 'reactstrap';
-import Icon from '../Icon/Icon'
+import Icon from '../../General/Icon/Icon'
 
 class Node extends Component {
     state = {

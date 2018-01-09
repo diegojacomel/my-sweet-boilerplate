@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Form, Field, reduxForm } from 'redux-form'
 import { Label, Button } from 'reactstrap'
 
-import FormControl from '../FormControl/FormControl'
-import InputButton from '../InputButton/InputButton'
+import FormControl from '../../Layout/FormControl/FormControl'
+import InputButton from '../../DataEntry/InputButton/InputButton'
 
 import './ContractFormSearch.scss'
 

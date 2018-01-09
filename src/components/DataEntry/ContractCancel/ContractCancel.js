@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Form, reduxForm, Field } from 'redux-form'
 import { Row, Col, Button, ButtonGroup, Label } from 'reactstrap'
 
-import FormControl from '../FormControl/FormControl'
-import Icon from '../Icon/Icon'
+import FormControl from '../../Layout/FormControl/FormControl'
+import Icon from '../../General/Icon/Icon'
 
 import './ContractCancel.scss'
 

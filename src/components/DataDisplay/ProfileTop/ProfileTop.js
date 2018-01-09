@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import Icon from '../Icon/Icon'
+import Icon from '../../General/Icon/Icon'
 
 import './ProfileTop.scss'
 

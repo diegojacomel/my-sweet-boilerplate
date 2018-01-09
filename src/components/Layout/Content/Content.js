@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import MyRouter from '../../router/router'
+import MyRouter from '../../../router/router'
 
 import './Content.scss'
 

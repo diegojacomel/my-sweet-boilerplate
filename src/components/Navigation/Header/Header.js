@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Container } from 'reactstrap'
 
-import Logo from '../Logo/Logo'
-import ProfileTop from '../ProfileTop/ProfileTop'
-import NotificationTop from '../NotificationTop/NotificationTop'
-import FontsizeTop from '../FontsizeTop/FontsizeTop'
+import Logo from '../../DataDisplay/Logo/Logo'
+import ProfileTop from '../../DataDisplay/ProfileTop/ProfileTop'
+import NotificationTop from '../../DataDisplay/NotificationTop/NotificationTop'
+import FontsizeTop from '../../DataDisplay/FontsizeTop/FontsizeTop'
 
 import './Header.scss'
 

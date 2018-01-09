@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 
 import { Container } from 'reactstrap'
 
-import Header from '../../components/Header/Header'
-import Sidebar from '../../components/Sidebar/Sidebar'
-import Content from '../../components/Content/Content'
-import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Navigation/Header/Header'
+import Sidebar from '../../components/Navigation/Sidebar/Sidebar'
+import Content from '../../components/Layout/Content/Content'
+import Footer from '../../components/Navigation/Footer/Footer'
 
 import './App.scss'
 

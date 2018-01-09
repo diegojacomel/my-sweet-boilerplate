@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Table, Button } from 'reactstrap'
 
-import ContractTableDetails from '../ContracTableDetails/ContractTableDetails'
+import ContractTableDetails from '../ContractTableDetails/ContractTableDetails'
 
 import './ContractTable.scss'
 
@@ -11,11 +11,9 @@ class ContractTable extends Component {
     state = { visible: false }    
 
     showDetails() {
-
         this.setState ({
             visible: !this.state.visible,
         })
-
     }
 
     render() {

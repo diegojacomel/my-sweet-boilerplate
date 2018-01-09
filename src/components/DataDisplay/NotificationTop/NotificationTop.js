@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Icon from '../Icon/Icon'
+import Icon from '../../General/Icon/Icon'
 
 import './NotificationTop.scss'
 

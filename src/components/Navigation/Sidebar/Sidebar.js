@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Collapse } from 'reactstrap';
 
-import Icon from '../Icon/Icon'
+import Icon from '../../General/Icon/Icon'
 import Menu from '../Menu/Menu'
 
 import './Sidebar.scss'
