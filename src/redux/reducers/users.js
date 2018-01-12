@@ -1,11 +1,4 @@
-/**
- * >> GOOD WAY TO NAME THE ACTION TYPES <<
- * NAME_REQUEST
- * NAME_SUCCESS
- * NAME_FAILURE
- * NAME_CANCEL
- * NAME_RESET
- */
+import { FETCH_USERS, ADD_USER, UPDATE_USER, DELETE_USER } from '../types/constants';
 
 const INITIAL_STATE = {
     users: {
@@ -16,7 +9,7 @@ const INITIAL_STATE = {
   
   const users = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-      case 'FETCH_USERS_REQUEST':
+      case FETCH_USERS.REQUEST:
         return {
           ...state,
           users: {
@@ -25,7 +18,7 @@ const INITIAL_STATE = {
           }
         }
   
-      case 'FETCH_USERS_SUCCESS':
+      case FETCH_USERS.SUCCESS:
         return {
           ...state,
           users: {
@@ -35,7 +28,7 @@ const INITIAL_STATE = {
           }
         }
   
-      case 'FETCH_USERS_FAILURE':
+      case FETCH_USERS.FAILURE:
         return {
           ...state,
           users: {
@@ -44,7 +37,7 @@ const INITIAL_STATE = {
           }
         }
 
-      case 'ADD_USER_SUCCESS':
+      case ADD_USER.SUCCESS:
         return {
           ...state,
           users: {
@@ -53,7 +46,7 @@ const INITIAL_STATE = {
           }
         }
       
-      case 'DELETE_USER_SUCCESS':
+      case DELETE_USER.SUCCESS:
       return {
         ...state,
         users: {
@@ -62,7 +55,7 @@ const INITIAL_STATE = {
         }
       }
       
-      case 'UPDATE_USER_SUCCESS':
+      case UPDATE_USER.SUCCESS:
       return {
         ...state,
         users: {          

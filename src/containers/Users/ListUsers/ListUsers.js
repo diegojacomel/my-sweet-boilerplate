@@ -6,6 +6,8 @@ import { Table, Jumbotron, Button } from 'reactstrap'
 
 import './ListUsers.scss'
 
+import { FETCH_USERS } from '../../../redux/types/constants';
+
 class ListUsers extends Component {
     state = {}
 
@@ -15,9 +17,9 @@ class ListUsers extends Component {
 
     fetchUsers = () => {
         const { dispatch } = this.props
-
+        
         dispatch({
-            type: 'FETCH_USERS_REQUEST',
+            type: FETCH_USERS.REQUEST,
             // payload: {} << here we can pass data to the saga (payload name is a convention)
         });
     }

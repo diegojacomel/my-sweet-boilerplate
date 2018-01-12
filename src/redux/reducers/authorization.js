@@ -1,11 +1,4 @@
-/**
- * >> GOOD WAY TO NAME THE ACTION TYPES <<
- * NAME_REQUEST
- * NAME_SUCCESS
- * NAME_FAILURE
- * NAME_CANCEL
- * NAME_RESET
- */
+import { FETCH_MENU_USER } from '../types/constants';
 
 const INITIAL_STATE = {
     menu: {
@@ -16,7 +9,7 @@ const INITIAL_STATE = {
 
 const auth = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'FETCH_MENU_USER_SUCCESS':
+        case FETCH_MENU_USER.SUCCESS:
             return {
                 ...state,
                 menu: {

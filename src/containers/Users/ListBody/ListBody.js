@@ -5,6 +5,7 @@ import { Link, Route } from 'react-router-dom'
 import { Container, Table, Jumbotron } from 'reactstrap'
 
 import './ListBody.scss'
+import { FETCH_USERS } from '../../../redux/types/constants';
 
 class ListBody extends Component {
     state = {}
@@ -17,7 +18,7 @@ class ListBody extends Component {
         const { dispatch } = this.props
 
         dispatch({
-            type: 'FETCH_USERS_REQUEST',
+            type: FETCH_USERS.REQUEST,
             // payload: {} << here we can pass data to the saga (payload name is a convention)
         });
     }
